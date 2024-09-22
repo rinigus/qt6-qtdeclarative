@@ -93,6 +93,8 @@ for prl_file in libQt6*.prl ; do
 done
 popd
 
+mv %{buildroot}%{_qt6_libdir}/objects-RelWithDebInfo %{buildroot}%{_qt6_libdir}/qt6/
+
 
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
