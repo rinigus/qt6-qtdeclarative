@@ -4,7 +4,7 @@ jobs:
   build-job:
     docker:
       - image: ghcr.io/sailfishos-open/docker-sailfishos-builder-aarch64:4.6.0.13
-    resource_class: arm.medium
+    resource_class: arm.large
 
     steps:
       - checkout:
