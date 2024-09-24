@@ -10,6 +10,9 @@ jobs:
       - checkout:
           path: "/source"
       - run:
+          name: "Get submodules"
+          command: "cd /source && git submodule update --init --recursive"
+      - run:
           name: "Build"
           command: "buildrpm -r https://repo.sailfishos.org/obs/home:/piggz:/qt6/sailfish_latest_aarch64/"
       - run:
